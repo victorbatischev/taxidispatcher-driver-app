@@ -1,18 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
+    compileSdkVersion 33
     buildToolsVersion '28.0.3'
     lintOptions {
-
         checkReleaseBuilds false
-
     }
 
     defaultConfig {
         applicationId "com.psdevelop.tdandrapp"
         minSdkVersion 15
-        targetSdkVersion 19
+        targetSdkVersion 33
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
@@ -31,6 +29,7 @@ android {
 }
 
 dependencies {
+    //noinspection GradleCompatible
     implementation 'com.android.support:support-v4:19.1.0'
     implementation('io.socket:socket.io-client:0.7.0') {
         exclude group: 'org.json', module: 'json'
