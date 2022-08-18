@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory 
+        android:title="Пользовательские настройки"
+        android:key="pref_key_user_settings">
+        <EditTextPreference
+            android:key="USER_LOGIN"
+            android:title="Логин"
+            android:summary="Логин для входа в Систему\n"
+            android:dialogTitle="Логин"
+            android:negativeButtonText="Отмена"
+            android:dialogMessage="Введите логин используемый для входа в Систему"
+            android:positiveButtonText="ОК"
+            obligatory="true"
+            android:inputType="text"
+            android:defaultValue="">
+        </EditTextPreference>
+        <EditTextPreference
+            android:key="USER_PSW"
+            android:title="Пароль"
+            android:summary="Пароль для входа в Систему\n"
+            android:dialogTitle="Пароль"
+            android:negativeButtonText="Отмена"
+            android:dialogMessage="Введите пароль, используемый для входа в Систему"
+            android:positiveButtonText="ОК"
+            obligatory="true"
+            android:inputType="textPassword"
+            android:defaultValue="">
+        </EditTextPreference>
+        <EditTextPreference
+            android:key="IP1"
+            android:title="Адрес сервера"
+            android:summary="Основной адрес(ip/имя) сервера\n"
+            android:dialogTitle="Основной IP"
+            android:negativeButtonText="Отмена"
+            android:dialogMessage="Введите основной адрес(доменное имя) сервера"
+            android:positiveButtonText="ОК"
+            obligatory="true"
+            android:inputType="text"
+            android:defaultValue="0.0.0.0">
+        </EditTextPreference>
+        <EditTextPreference
+            android:key="IP1_PORT"
+            android:title="Порт основного IP"
+            android:summary="Порт доступа основного IP-адреса сервера\n"
+            android:dialogTitle="Порт основного IP"
+            android:negativeButtonText="Отмена"
+            android:dialogMessage="Введите порт доступа основного IP-адреса сервера"
+            android:positiveButtonText="ОК"
+            obligatory="true"
+            android:inputType="number"
+            android:defaultValue="6030">
+        </EditTextPreference>
+        <EditTextPreference
+            android:key="WSS1_PORT"
+            android:title="Порт основного WS"
+            android:summary="Порт доступа основного WS-адреса сервера\n"
+            android:dialogTitle="Порт основного WS"
+            android:negativeButtonText="Отмена"
+            android:dialogMessage="Введите порт доступа основного WS-адреса сервера"
+            android:positiveButtonText="ОК"
+            obligatory="true"
+            android:inputType="number"
+            android:defaultValue="8088">
+        </EditTextPreference>
+    <CheckBoxPreference
+        android:key="PLAY_TONES"
+        android:title="@string/song_title"
+        android:summary="@string/song_summary"
+        android:defaultValue="true"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="ALARM_VIBRATE"
+        android:title="Вибрация"
+        android:summary="Настройка вибрации"
+        android:defaultValue="true"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="SHOW_LIST_MENUS"
+        android:title="Меню-списки"
+        android:summary="Отображение альтернативных меню-списков"
+        android:defaultValue="true"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="ALARM_BACKLIGHT"
+        android:title="Мигание подсветки"
+        android:summary="Настройка мигания подсветки"
+        android:defaultValue="true"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="ALARM_ORDER_CONFIRM"
+        android:title="Оповещение неподтвержденности"
+        android:summary="Периодическое напоминание неподтвержденного заказа"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <EditTextPreference 
+        android:key="REGION_PHONE_CODE" 
+        android:title="Код местного региона"
+        android:summary="Установка телефонного кода местного региона\n"
+        android:dialogTitle="Код местного региона"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите код местного региона"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="86133"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <CheckBoxPreference
+        android:key="NIGTH_MODE"
+        android:title="Ночной режим"
+        android:summary="Включение ночной гаммы интерфейса"
+        android:defaultValue="false" />
+    <CheckBoxPreference
+        android:key="MANUAL_SECTOR_REFRESH"
+        android:title="Обновление секторов"
+        android:summary="Получение обновленных статусов секторов перед действиями (выбором сектора)"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="CHECK_CONNECTION"
+        android:title="Проверка соединения"
+        android:summary="Включение постоянное проверки связи"
+        android:defaultValue="true"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <EditTextPreference 
+        android:key="CHECK_CONN_TIME" 
+        android:title="Время проверки соединения"
+        android:summary="Установка частоты проверки соединения с сервером\n"
+        android:dialogTitle="Время проверки соединения"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите время проверки соединения с сервером"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="600"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="RECONNECT_NUMBERS" 
+        android:title="Попыток соединения"
+        android:summary="Количество попыток соединения с сервером\n"
+        android:dialogTitle="Попыток соединения"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите количество попыток соединения с сервером"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="600"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <CheckBoxPreference
+        android:key="REQ_BALANCE_START"
+        android:title="Баланс при старте"
+        android:summary="Автозапрос баланса при соединении"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="SEND_ONPLACE_CALL"
+        android:title="На точке по звонку"
+        android:summary="Сообщение НА ТОЧКЕ при звонке"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="CONF_LINEOUT_EXIT"
+        android:title="Снятие при выходе"
+        android:summary="Спрашивать о снятии с линии при выходе"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <EditTextPreference 
+        android:key="DISP_PHONE" 
+        android:title="Номер диспетчера"
+        android:summary="Телефонный номер диспетчера"
+        android:dialogTitle="Номер диспетчера"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите телефонный номер диспетчера"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="text"
+        android:defaultValue=""
+        android:enabled="true">
+    </EditTextPreference>
+    </PreferenceCategory>
+    <PreferenceCategory 
+        android:title="Системные настройки"
+        android:key="pref_key_system_settings">
+    <EditTextPreference 
+        android:key="IP2" 
+        android:title="Резервный IP"
+        android:summary="Резервный IP-адрес сервера\n"
+        android:dialogTitle="Резервный IP"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите резервный IP-адрес сервера"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="text"
+        android:defaultValue=""
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="IP2_PORT" 
+        android:title="Порт резервного IP"
+        android:summary="Порт доступа резервного IP-адреса сервера\n"
+        android:dialogTitle="Порт резервного IP"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите порт доступа резервного IP-адреса сервера"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue=""
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="SOCK_CONN_TIMEOUT" 
+        android:title="Таймаут соединения"
+        android:summary="Таймаут соединения с сокет-сервером\n"
+        android:dialogTitle="Таймаут соединения"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите таймаут соединения с сокет-сервером"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="0"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <CheckBoxPreference
+        android:key="SHOW_LOG"
+        android:title="Лог"
+        android:summary="Включение вывода лога"
+        android:defaultValue="true"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="ACCUM_LOG"
+        android:title="Вывод лога"
+        android:summary="Настройка растущего лога"
+        android:defaultValue="true"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="PASSIVE_NET_MODE"
+        android:title="Сетевой обмен"
+        android:summary="Включение пассивного сетевого режима"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory 
+        android:title="Настройки GPS"
+        android:key="gps_settings">
+    <CheckBoxPreference
+        android:key="USE_GPS"
+        android:title="GPS-мониториг"
+        android:summary="Включение GPS-мониторинга положения"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <EditTextPreference 
+        android:key="GPS_SRV_ADR" 
+        android:title="Адрес GPS-сервера"
+        android:summary="Базовый адрес GPS-сервера сброра информации\n"
+        android:dialogTitle="Адрес GPS-сервера"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите адрес GPS-сервера сброра информации"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="text"
+        android:defaultValue=""
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="GPS_ACC_ID" 
+        android:title="ID GPS-аккаунта"
+        android:summary="Идентификатор аккаунта в учете GPS-сервера\n"
+        android:dialogTitle="ID GPS-аккаунта"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите ID GPS-аккаунта"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="text"
+        android:defaultValue=""
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="GPS_DEV_ID" 
+        android:title="ID GPS-устройства"
+        android:summary="Идентификатор устройства в учете GPS-сервера\n"
+        android:dialogTitle="ID GPS-устройства"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите ID GPS-устройства"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="text"
+        android:defaultValue=""
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="GEOCODE_PREFIX" 
+        android:title="Префикс геокодирования"
+        android:summary="Префикс строки адреса по запросу координат\n"
+        android:dialogTitle="Префикс геокодирования"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите префикс геокодирования"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="text"
+        android:defaultValue=""
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="TRACK_INTERVAL" 
+        android:title="Интервал GPS-лога"
+        android:summary="Интервал GPS-сканирования местоположения (в секундах)\n"
+        android:dialogTitle="Интервал GPS-лога"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите интервал GPS-сканирования местоположения (в секундах)"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="60"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="TRACK_DISTANCE" 
+        android:title="Дистанция GPS-лога"
+        android:summary="Дистанция GPS-сканирования местоположения (в метрах)\n"
+        android:dialogTitle="Дистанция GPS-лога"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите дистанцию GPS-сканирования местоположения (в метрах)"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="500"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <CheckBoxPreference
+        android:key="USE_GPS_TAXOMETER"
+        android:title="GPS-таксометр"
+        android:summary="Включение GPS-таксометра"
+        android:defaultValue="true"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="USE_NETWORK_LOCATION"
+        android:title="Определение координат через сеть"
+        android:summary="Включение определения координат через данные сетей"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="USE_BOTH_LOCATIONS"
+        android:title="Определение координат адаптивно"
+        android:summary="Включение определения координат всеми способами"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="CONFIRM_WIFI_ENABLED"
+        android:title="Локация при помощи WIFI"
+        android:summary="Требовать включения WIFI для геолокации средствами сетей"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="TAXOMETR_INCCALL_ABORT"
+        android:title="Прерывание входящих"
+        android:summary="Прерывание входящих звонков при работающем таксометре"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <EditTextPreference 
+        android:key="TMETER_MIN_DISTANCE" 
+        android:title="Мин. дистанция таксометра"
+        android:summary="Минимальная дистанция приращения таксометра (в метрах)\n"
+        android:dialogTitle="Мин. дистанция таксометра"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите минимальную дистанцию приращения таксометра (в метрах)"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="7"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="TMETER_MAX_DISTANCE" 
+        android:title="Макс. дистанция таксометра"
+        android:summary="Максимальная дистанция приращения таксометра (в метрах)\n"
+        android:dialogTitle="Макс. дистанция таксометра"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите максимальную дистанцию приращения таксометра (в метрах)"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="800"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="TMETER_MIN_SPEED" 
+        android:title="Мин. скорость таксометра"
+        android:summary="Минимальная скорость приращения таксометра (в км/час)\n"
+        android:dialogTitle="Мин. скорость таксометра"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите минимальную скорость приращения таксометра (в км/час)"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="12"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="TMETER_MAX_SPEED" 
+        android:title="Макс. скорость таксометра"
+        android:summary="Максимальная скорость приращения таксометра (в км/час)\n"
+        android:dialogTitle="Макс. скорость таксометра"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите максимальную скорость приращения таксометра (в км/час)"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="200"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <CheckBoxPreference
+        android:key="USE_CALC_SPEED_DIST"
+        android:title="Учит. высчит. скорость"
+        android:summary="Учит. высчит. скорость при подсчете расстояния"
+        android:defaultValue="true"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="USE_SENS_SPEED_DIST"
+        android:title="Учит. скорость датчика"
+        android:summary="Учит. скорость датчика при подсчете расстояния"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="USE_TIME_DIST_BALANCE"
+        android:title="Адапт. таксометр"
+        android:summary="Считать время и расстояние вместе адаптивным способом"
+        android:defaultValue="true"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <EditTextPreference 
+        android:key="START_BACK_TIME" 
+        android:title="Стартовое время"
+        android:summary="Количество бесплатного стартового времени (в мин.)\n"
+        android:dialogTitle="Стартовое время"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите количество бесплатного стартового времени (в мин)"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="0"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="START_BACK_DISTANCE" 
+        android:title="Стартовое расстояние"
+        android:summary="Количество неучитыв. стартового расстояния (в м.)\n"
+        android:dialogTitle="Стартовое расстояние"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите количество неучитыв. стартового расстояния (в м.)"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="0"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="FIXED_OVERST_DSUMM" 
+        android:title="Сумма поверх ст. расстояния"
+        android:summary="Сумма оплаты поверх стартового расстояния (в руб.)\n"
+        android:dialogTitle="Сумма поверх ст. расстояния"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите сумму поверх ст. расстояния (в руб.)"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="0"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="REGULAR_BACK_TIME" 
+        android:title="Беспл. вр. в поездке"
+        android:summary="Количество бесплатного времени в поездке (в мин.)\n"
+        android:dialogTitle="Беспл. вр. в поездке"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите количество бесплатного времени в поездке (в мин)"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="1"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="REGULAR_BACK_DISTANCE" 
+        android:title="Расст. для беспл. вр."
+        android:summary="Расстояние, критичное для бесплатного времени в поездке (в м.)\n"
+        android:dialogTitle="Расст. для беспл. вр."
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите расстояние, критичное для бесплатного времени в поездке (в м.)"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="30"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <EditTextPreference 
+        android:key="MAX_ORDER_PRICE" 
+        android:title="Маскимальная стоимость (0-неогр.)"
+        android:summary="Максимально ограничивающая стоимость заказ (0-неогр.)\n"
+        android:dialogTitle="Маскимальная стоимость (0-неогр.)"
+        android:negativeButtonText="Отмена"
+        android:dialogMessage="Введите максимальную стоимость заказа (0-неогр.)"
+        android:positiveButtonText="ОК"
+        obligatory="true" 
+        android:inputType="number"
+        android:defaultValue="0"
+        android:visibility="invisible"
+        android:enabled="false">
+    </EditTextPreference>
+    <CheckBoxPreference
+        android:key="CALC_SALE_DINAMYC"
+        android:title="Динамическая сумма"
+        android:summary="Считать стоимость поездки динамически"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="CHECK_TARIF_AREA"
+        android:title="Проверять область тарифа"
+        android:summary="Проверять область действия тарифа по измеряемым координатам"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="RESTORE_TAXOMETR"
+        android:title="Восстанавливать таксометр"
+        android:summary="Восстанавливать таксометр при загрузке окна"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="TAXOMETR_AS_SERVICE"
+        android:title="Таксометр как сервис"
+        android:summary="Запускать таксометр как фоновый сервис"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="SEND_CURR_COORDS"
+        android:title="Отсылать текущие координаты"
+        android:summary="Отсылать текущие координаты машины на сервер"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="SLEEP_TIME_STDIST"
+        android:title="Не счит время на стартовом"
+        android:summary="Не считать время на стартовом расстоянии"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="WAIT_DLG_AUTO"
+        android:title="Всплывающий список ожидающих"
+        android:summary="Показывать список ожидающих при обновлении"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="WAIT_DLG_WITH_SECT"
+        android:title="Список ожидающих с секторами"
+        android:summary="Показывать многоуровневый список ожидающих с секторами"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="RESET_LOST_BTIME"
+        android:title="RESET_LOST_BTIME"
+        android:summary="RESET_LOST_BTIME"
+        android:defaultValue="false"
+        android:visibility="invisible"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:key="SOCKET_IN_SERVICE"
+        android:title="Фоновый режим"
+        android:summary="Новый фоновый режим (обязательно)"
+        android:defaultValue="true"
+        android:visibility="invisible"
+        android:enabled="false" />
+        <CheckBoxPreference
+            android:key="HIDE_OTH_SECT_WAIT_ORDS"
+            android:title="Скрывать аукцион с др. секторов"
+            android:summary="Скрывать аукционные заявки с других секторов"
+            android:defaultValue="false"/>
+        <CheckBoxPreference
+            android:key="SHOW_KOPS_IN_SUMM"
+            android:title="Показывать копейки"
+            android:summary="Показывать копейки в сумме"
+            android:defaultValue="false"/>
+        <CheckBoxPreference
+            android:key="START_TIME_CALC_WITH_MENU"
+            android:title="Старт минут вручную"
+            android:summary="Стартовать подсчет времени таксометром вречную"
+            android:defaultValue="false"/>
+        <EditTextPreference
+            android:key="CURRENCY_SHORT"
+            android:title="Валюта сокращенно"
+            android:summary="Сокращенное обозначение валюты"
+            android:dialogTitle="Введите сокращенное обозначение валюты"
+            android:negativeButtonText="Отмена"
+            android:dialogMessage="Введите сокращенное обозначение валюты"
+            android:positiveButtonText="ОК"
+            obligatory="true"
+            android:inputType="text"
+            android:defaultValue="р.">
+        </EditTextPreference>
+        <EditTextPreference
+            android:key="STATE_PHONE_CODE"
+            android:title="Телефонный код страны"
+            android:summary="Установка телефонного кода страны\n"
+            android:dialogTitle="Код страны"
+            android:negativeButtonText="Отмена"
+            android:dialogMessage="Введите код страны"
+            android:positiveButtonText="ОК"
+            obligatory="true"
+            android:inputType="text"
+            android:defaultValue="+\+7">
+        </EditTextPreference>
+    </PreferenceCategory>
+    <PreferenceCategory
+                android:title="Настройки звуков"
+				android:key="sound_settings">
+                <ListPreference
+                        android:title="Звук ожидающих"
+                        android:summary="Мелодия оповещения обновления списка ожидающих заказов"
+                        android:key="freeOrdTonePref"
+                        android:defaultValue="bonus"
+                        android:entries="@array/ringTonesArray"
+                        android:entryValues="@array/ringTonesValues"
+                    android:enabled="true" />
+        <ListPreference
+            android:title="Звук назначения"
+            android:summary="Мелодия назначения нового заказа"
+            android:key="assignOrdTonePref"
+            android:defaultValue="guitar"
+            android:entries="@array/ringTonesArray"
+            android:entryValues="@array/ringTonesValues"
+            android:enabled="true" />
+        <ListPreference
+            android:title="Звук отчета"
+            android:summary="Мелодия отчета по заказу"
+            android:key="reportOrdTonePref"
+            android:defaultValue="guitar"
+            android:entries="@array/ringTonesArray"
+            android:entryValues="@array/ringTonesValues"
+            android:enabled="true" />
+        <ListPreference
+            android:title="Звук соединения"
+            android:summary="Мелодия удачного соединения"
+            android:key="connectingTonePref"
+            android:defaultValue="guitar"
+            android:entries="@array/ringTonesArray"
+            android:entryValues="@array/ringTonesValues"
+            android:enabled="true" />
+        </PreferenceCategory>
+    <CheckBoxPreference
+        android:key="USE_NEW_COORD_LOC_ALGORYTHM"
+        android:title="Расш. формат зон(вт)"
+        android:summary="Использовать алгоритм расширенного расчерчивания координат зон тарифов"
+        android:defaultValue="true"/>
+    <CheckBoxPreference
+        android:key="AUTO_DETECT_SECTOR"
+        android:title="Автоопределение секторов"
+        android:summary="Автоматически определять текущий сектор водителя"
+        android:defaultValue="false"/>
+    <CheckBoxPreference
+        android:key="USE_DRIVERS_SOCKET_SERVER"
+        android:title="Сервер водителей"
+        android:summary="Использовать новый сервер водителей"
+        android:defaultValue="false"
+        android:enabled="false" />
+</PreferenceScreen>

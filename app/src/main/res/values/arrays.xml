@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="ringTonesArray">
+   <item>bonus</item>
+   <item>cdub</item>
+   <item>critical</item>
+   <item>din</item>
+   <item>guitar</item>
+   <item>icq_inc</item>
+   <item>connect</item>
+   <item>order_set</item>
+   <item>wait_list</item>
+   <item>order_report</item>
+</string-array>
+ 
+<string-array name="ringTonesValues">
+   <item>bonus</item>
+   <item>cdub</item>
+   <item>critical</item>
+   <item>din</item>
+   <item>guitar</item>
+   <item>icq_inc</item>
+   <item>connect</item>
+   <item>order_set</item>
+   <item>wait_list</item>
+   <item>order_report</item>
+</string-array>
+</resources>
