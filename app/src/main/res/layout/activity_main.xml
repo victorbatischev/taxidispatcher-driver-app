@@ -2,25 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:padding="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <EditText
-        android:id="@+id/PasswordEdit"
-        android:enabled="false"
-        android:layout_width="fill_parent"
+    <TextView
+        android:id="@+id/StatusText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/Login"
-        android:layout_below="@+id/Login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:inputType="textPassword" >
-
-        <requestFocus />
-    </EditText>
+        android:layout_alignLeft="@+id/Login"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/hello_world" />
 
     <EditText
         android:id="@+id/Login"
@@ -41,14 +33,19 @@
         android:layout_marginTop="14dp"
         android:text="@string/password" />
 
-    <TextView
-        android:id="@+id/StatusText"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/PasswordEdit"
+        android:enabled="false"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Login"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
-        android:text="@string/hello_world" />
+        android:layout_alignRight="@+id/Login"
+        android:layout_below="@+id/Password"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPassword" >
+
+        <requestFocus />
+    </EditText>
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -56,6 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/PasswordEdit"
         android:layout_below="@+id/PasswordEdit"
+        android:layout_marginBottom="14dp"
         android:orientation="vertical" >
 
     </LinearLayout>
@@ -64,23 +62,24 @@
         android:id="@+id/buttonEnter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Войти"
-        android:layout_below="@+id/PasswordEdit"
+        android:layout_below="@+id/linearLayout1"
         android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/buttonSettings" />
+        android:layout_toLeftOf="@+id/buttonSettings"
+        android:text="Войти"
+        android:layout_marginRight="10dp"/>
 
     <Button
         android:id="@+id/buttonSettings"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="Настройки"
         android:layout_below="@+id/linearLayout1"
-        android:layout_alignRight="@+id/PasswordEdit" />
+        android:layout_alignRight="@+id/PasswordEdit"
+        android:text="Настройки" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/settInfo"
         android:layout_toRightOf="@+id/linearLayout1"
         android:layout_below="@+id/buttonEnter"
