@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TD Водитель</string>
-    <string name="action_settings">Настройки…</string>
+    <string name="app_name">Водитель такси TD [2.10.160 - a4.4]</string>
+    <string name="action_settings">Настройки...</string>
     <string name="hello_world">ЛОГИН:</string>
-    <string name="work_start">Работать…</string>
+    <string name="work_start">Работать...</string>
     <string name="exit_on_enter">Выход</string>
     <string name="password">ПАРОЛЬ:</string>
     <string name="song_title">Звук</string>
@@ -14,7 +14,7 @@
     <string name="msg_dialog_close_str">ОК</string>
     <string name="sett_act_title">Панель настроек</string>
     <string name="online_act_title">Окно РАБОТА [2.10.160 - a4.4]</string>
-    <string name="sector_str">Выбрать сектор</string>
+    <string name="sector_str">Выбр.сектор</string>
     <string name="on_launch_str">На перерыв</string>
     <string name="from_launch_str">С перерыва</string>
     <string name="sale_str">Отчет</string>
@@ -26,15 +26,15 @@
         <item>Войти в систему</item>
         <item>Настройки</item>
         <item>Завершить программу</item>
-        <item >Обновление…</item>
+        <item >Обновление...</item>
     </string-array>
     <string-array name="work_menu_array">
-        <item >Позвонить…</item>
+        <item >Позвонить...</item>
         <item>Отчитаться</item>
         <item>Прочие действия</item>
     </string-array>
 
     <string name="title_activity_sector_list">SectorList</string>
-    <string name="call_client_str">Позвонить…</string>
+    <string name="call_client_str">Позвонить...</string>
 
 </resources>

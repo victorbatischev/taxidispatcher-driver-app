@@ -1,48 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item
-        android:id="@+id/change_sector"
-        android:title="@string/sector_str"
-        android:icon="@drawable/ic_menu_myplaces"
-        android:orderInCategory="1" />
-    <item
-        android:id="@+id/on_launch"
-        android:title="@string/on_launch_str"
-        android:icon="@drawable/emo_im_undecided"
-        android:orderInCategory="2" />
-    <item
-        android:id="@+id/from_launch"
-        android:title="@string/from_launch_str"
-        android:icon="@drawable/ic_menu_goto"
-        android:orderInCategory="3" />
-    <item
-        android:id="@+id/order_complete"
-        android:title="@string/sale_str"
-        android:icon="@drawable/ic_coins_s"
-        android:orderInCategory="4" />
-    <item
-        android:id="@+id/queqe_info"
-        android:title="@string/queue_info_str"
-        android:icon="@drawable/ic_menu_friendslist"
-        android:orderInCategory="5" />
-    <item
-        android:id="@+id/self_ordering"
-        android:title="@string/self_ord_str"
-        android:icon="@drawable/ic_menu_refresh"
-        android:orderInCategory="6" />
-    <item
-        android:id="@+id/refresh_conn"
-        android:title="@string/refresh_str"
-        android:icon="@drawable/ic_menu_refresh"
-        android:orderInCategory="7" />
-    <item
-        android:id="@+id/call_client"
-        android:title="@string/call_client_str"
-        android:orderInCategory="8" />
-    <item
-        android:id="@+id/online_exit"
-        android:title="@string/exit_on_enter"
-        android:icon="@drawable/ic_lock_power_off"
-        android:orderInCategory="9" />
+    <item android:id="@+id/online_exit" android:title="@string/exit_on_enter" android:icon="@drawable/ic_lock_power_off"></item>
+    <item android:id="@+id/change_sector" android:title="@string/sector_str" android:icon="@drawable/ic_menu_myplaces"></item>
+    <item android:id="@+id/on_launch" android:title="@string/on_launch_str" android:icon="@drawable/emo_im_undecided"></item>
+    <item android:id="@+id/from_launch" android:title="@string/from_launch_str" android:icon="@drawable/ic_menu_goto"></item>
+    <item android:id="@+id/order_complete" android:title="@string/sale_str" android:icon="@drawable/ic_coins_s"></item>
+    <item android:id="@+id/queqe_info" android:title="@string/queue_info_str" android:icon="@drawable/ic_menu_friendslist"></item>
+    <item android:id="@+id/self_ordering" android:title="@string/self_ord_str" android:icon="@drawable/ic_menu_refresh"></item>
+    <item android:id="@+id/refresh_conn" android:title="@string/refresh_str" android:icon="@drawable/ic_menu_refresh"></item>
+    <item android:id="@+id/call_client" android:title="@string/call_client_str"></item>
+    
 
 </menu>
